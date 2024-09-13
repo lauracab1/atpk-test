@@ -1,0 +1,10 @@
+.container--front {
+  background-image: asset-url('lcdo.jpg');
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

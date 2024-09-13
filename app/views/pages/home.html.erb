@@ -1,2 +1,19 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<div class="container--front">
+  <h1>Le Chant des oiseaux</h1>
+    <div class="card-password">
+      <%= simple_form_for :secret_code, url: verify_code_path, method: :post do |f| %>
+        <%= f.input :code, label: "Secret de piou piou" %>
+        <%= f.button :submit, "Go" %>
+      <% end %>
+
+      <% if flash[:error] %>
+        <p style="color: red;"><%= flash[:error] %></p>
+      <% end %>
+    </div>
+<%# Créer un input pour renseigner le code secret %>
+<%# récupérer la valeur de l'input et si comparé avec le code sercret du dernier event. %>
+<%# Si c'est le bon code renvoyer vers la page du dernier event %>
+<%# Sinon rester sur la page d'accueil et afficher un message d'erreur %>
+
+</div>
